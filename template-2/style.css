@@ -1,1 +1,280 @@
+/* Font Family */
 
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url("./Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Dm-sans";
+    src: url("./DMSans_24pt-Regular.ttf");
+}
+
+
+/* CSS Variables */
+
+:root {
+    /* Color variables */
+    --action-primary: #25DAC5;
+    --action-secondary: #482BE7;
+    --background-dark: #2F1893;
+    --body-bg: #FFFFFF;
+    --border-color: rgba(255, 255, 255, 0.2);
+    --form-bg: rgb(47, 24, 147);
+    --colors-white: #FFFFFF;
+    --light-white: rgba(255, 255, 255, 0.3);
+    /* Font family */
+    --font-poppins-reg: "Poppins-Regular";
+    --font-Dm-sans: "Dm-sans";
+}
+
+
+/* CSS Boilerplate */
+
+html *,
+body * {
+    margin: 0;
+    padding: 0;
+    inset: 0 0 0 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: var(--body-bg, #FFFFFF);
+}
+
+html *::before,
+html *::after,
+body *::before,
+body *::after {
+    margin: 0;
+    padding: 0;
+    content: "";
+    inset: 0 0 0 0;
+    position: relative;
+}
+
+
+/* main-container */
+
+.container {
+    width: 1400px;
+    height: 800px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background: var(--background-dark, #2F1893);
+}
+
+
+/* nav bar container */
+
+.nav-bar-container {
+    height: 40px;
+    width: 1159px;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 53px 126px 44.5px 115px;
+}
+
+.startup,
+.subscribe,
+.features,
+.sign-up-btn {
+    position: absolute;
+    font-style: normal;
+    text-align: center;
+    color: var(--colors-white, #FFFFFF);
+    font-family: var(--font-Dm-sans, "Dm-sans");
+}
+
+.startup {
+    /* box-dimension */
+    width: 111px;
+    height: 36px;
+    /* font-styling */
+    font-size: 24px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.293px;
+    color: var(--colors-white, #FFFFFF);
+    font-family: var(--font-poppins-reg, "Poppins-Regular");
+}
+
+.subscribe,
+.features,
+.sign-up-btn {
+    /* font-styling */
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.subscribe {
+    /* box-dimension */
+    width: 86px;
+    height: 28px;
+    margin: 7.4px 243px 4.6px 830px;
+    /* font-styling */
+    line-height: 28px;
+}
+
+.features {
+    /* box-dimension */
+    width: 74px;
+    height: 28px;
+    margin: 7.4px 136px 4.6px 949px;
+    /* font-styling */
+    line-height: 28px;
+}
+
+.sign-up-btn {
+    /* box-dimension */
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 100px;
+    margin-left: 1059px;
+    background: var(--action-secondary, #482BE7);
+    /* font-styling */
+    line-height: 26px;
+}
+
+
+/* ==================================================== */
+
+
+/* Text-Box */
+
+.text-box {
+    width: 770px;
+    height: 312px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin: 44.5px 315px 36.6px 315px;
+}
+
+.text {
+    margin: auto;
+    position: relative;
+}
+
+.text-1 {
+    width: 770px;
+    height: 172px;
+    margin-bottom: 22.9px;
+}
+
+.text-2 {
+    width: 607px;
+    height: 96px;
+    margin-top: 22.9px;
+}
+
+.text-1 h1,
+.text-2 h5 {
+    font-style: normal;
+    text-align: center;
+    color: var(--colors-white, #FFF);
+    font-family: var(--font-Dm-sans, "Dm-sans");
+}
+
+.text-1 h1 {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 86px;
+    letter-spacing: -1px;
+    padding-inline: 31px;
+}
+
+.text-2 h5 {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 32px;
+    padding-inline: 8px;
+}
+
+
+/* email-box */
+
+.email-box {
+    width: 350px;
+    height: 60px;
+    box-sizing: border-box;
+    margin: 36.6px 590px 173px 460px;
+}
+
+form input#Email-input {
+    /* box-dimension */
+    width: 350px;
+    height: 60px;
+    border-radius: 100px;
+    padding: 12px 36px 12px 24px;
+    border: 2.5px solid var(--border-color, rgba(255, 255, 255, 0.2));
+    /* Font-Styling */
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    font-style: normal;
+    color: var(--colors-white, #FFFFFF);
+    font-family: var(--font-Dm-sans, "Dm-sans");
+    background-color: var(--form-bg, rgb(47, 24, 147));
+}
+
+#Email-input::placeholder {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    font-style: normal;
+    font-family: var(--font-type, "Dm-sans");
+    color: var(--light-white, rgba(255, 255, 255, 0.3));
+}
+
+.btn {
+    width: 425px;
+    height: 114.4px;
+    position: relative;
+    inset: -60px 460px 118.6px 55px;
+}
+
+.btn button {
+    /* button-dimension */
+    width: 120px;
+    height: 60px;
+    border: none;
+    margin-left: 305px;
+    position: relative;
+    border-radius: 30px;
+    background: var(--action-primary, #25DAC5);
+    /* font-style */
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    text-align: center;
+    font-style: normal;
+    letter-spacing: 0.5px;
+    color: var(--colors-white, #FFFFFF);
+    font-family: var(--font-poppins-reg, "Poppins-Regular");
+}
+
+.content {
+    position: absolute;
+    margin-top: 92.4px;
+}
+
+.content p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    font-style: normal;
+    letter-spacing: -0.2px;
+    font-family: var(--font-poppins-reg, "Poppins-Regular");
+    color: var(--light-white, rgba(255, 255, 255, 0.3));
+}
